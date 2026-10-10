@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart.com: Order Details - OD438851752103565100</title>
+  <link rel="icon" href="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/logo_lite-cbb357.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: #f1f3f6;
+      color: #212121;
+      font-size: 14px;
+      line-height: 1.4;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* TOP HEADER - DESKTOP */
+    .header-top {
+      background-color: #2874f0;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
+    }
+
+    .header-inner {
+      width: 100%;
+      max-width: 1248px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    /* MOBILE HEADER ELEMENTS (HIDDEN ON DESKTOP) */
+    .mobile-header-inner {
+      display: none;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      height: 52px;
+    }
+
+    .mobile-header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mobile-back-btn {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      padding: 4px;
+    }
+
+    .mobile-back-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: #ffffff;
+    }
+
+    .mobile-header-title {
+      font-size: 17px;
+      font-weight: 500;
+      color: #ffffff;
+      letter-spacing: 0.2px;
+    }
+
+    .mobile-header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .mobile-header-icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .mobile-header-icon-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      margin-right: 28px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .logo-title {
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 18px;
+      letter-spacing: -0.2px;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      font-style: italic;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      margin-top: 2px;
+    }
+
+    .logo-sub .explore {
+      color: #f0f0f0;
+      margin-right: 2px;
+    }
+
+    .logo-sub .plus {
+      color: #ffe500;
+      font-weight: 600;
+    }
+
+    .search-box-wrapper {
+      position: relative;
+      flex: 1;
+      max-width: 560px;
+      margin-right: 24px;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 36px;
+      padding: 0 44px 0 16px;
+      border-radius: 2px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+      color: #212121;
+    }
+
+    .search-input::placeholder {
+      color: #878787;
+      font-size: 14px;
+    }
+
+    .search-icon-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .header-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-left: auto;
+    }
+
+    .header-link-item {
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .header-link-item svg.chevron {
+      margin-left: 5px;
+      transition: transform 0.2s;
+    }
+
+    .cart-link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .cart-icon-wrap {
+      position: relative;
+      margin-right: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background-color: #ff6161;
+      color: #ffffff;
+      border-radius: 50%;
+      height: 16px;
+      min-width: 16px;
+      padding: 0 4px;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ffffff;
+    }
+
+    /* SUBNAV BAR */
+    .header-subnav {
+      background: #ffffff;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #e0e0e0;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,.08);
+    }
+
+    .subnav-inner {
+      width: 100%;
+      max-width: 1248px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+
+    .subnav-item {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #212121;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .subnav-item:hover {
+      color: #2874f0;
+    }
+
+    .subnav-item svg {
+      margin-left: 5px;
+      fill: #878787;
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb-bar {
+      max-width: 1248px;
+      margin: 12px auto 8px;
+      padding: 0 16px;
+      font-size: 12px;
+      color: #878787;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .breadcrumb-bar a {
+      color: #878787;
+      text-decoration: none;
+    }
+
+    .breadcrumb-bar a:hover {
+      color: #2874f0;
+    }
+
+    .breadcrumb-bar span.active {
+      color: #212121;
+    }
+
+    /* MAIN CONTAINER */
+    .main-layout {
+      max-width: 1248px;
+      margin: 0 auto 30px;
+      padding: 0 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .col-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .col-right {
+      width: 380px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* CARD STYLING */
+    .card {
+      background: #ffffff;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+      padding: 20px 24px;
+      position: relative;
+    }
+
+    /* PRODUCT SUMMARY SECTION */
+    .product-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .product-info {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .product-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #212121;
+      margin-bottom: 4px;
+      cursor: pointer;
+    }
+
+    .product-subtitle {
+      font-size: 12px;
+      color: #878787;
+      margin-bottom: 4px;
+    }
+
+    .seller-info {
+      font-size: 12px;
+      color: #878787;
+      margin-bottom: 12px;
+    }
+
+    .price-row-left {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .price-amount {
+      font-size: 16px;
+      font-weight: 600;
+      color: #212121;
+    }
+
+    .price-strikethrough {
+      color: #878787;
+      text-decoration: line-through;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 2px;
+    }
+
+    .offers-count {
+      font-size: 13px;
+      font-weight: 600;
+      color: #388e3c;
+      cursor: pointer;
+    }
+
+    .product-thumb-container {
+      width: 76px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .product-thumb-container img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    /* STATUS TRACKER TIMELINE */
+    .timeline-container {
+      margin-top: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 24px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 14px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: -13px;
+      top: 14px;
+      width: 2px;
+      height: calc(100% - 8px);
+      background-color: #e0e0e0;
+    }
+
+    .timeline-line.active {
+      background-color: #26a541;
+    }
+
+    .timeline-line.dashed {
+      border-left: 2px dashed #c2c2c2;
+      background: transparent;
+      width: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -19px;
+      top: 1px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 2px solid #878787;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .timeline-dot.completed {
+      background: #26a541;
+      border-color: #26a541;
+    }
+
+    .timeline-dot.completed svg {
+      fill: #ffffff;
+      width: 8px;
+      height: 8px;
+    }
+
+    .timeline-content {
+      flex: 1;
+      margin-left: 12px;
+    }
+
+    .timeline-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #212121;
+    }
+
+    .timeline-desc-box {
+      background-color: #eaf6eb;
+      color: #388e3c;
+      font-size: 12.5px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-top: 6px;
+      display: inline-block;
+      font-weight: 400;
+      max-width: 100%;
+    }
+
+    .see-all-updates {
+      font-size: 13px;
+      font-weight: 500;
+      color: #2874f0;
+      cursor: pointer;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .see-all-updates:hover {
+      text-decoration: underline;
+    }
+
+    .delivery-exec-note {
+      font-size: 12px;
+      color: #878787;
+      margin-bottom: 22px;
+    }
+
+    /* CARD ACTION FOOTER */
+    .card-actions-bar {
+      border-top: 1px solid #f0f0f0;
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .action-btn {
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: none;
+      outline: none;
+      color: #212121;
+      padding: 6px 12px;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+
+    .action-btn:hover {
+      background-color: #f7f9fa;
+    }
+
+    .action-btn.chat-btn {
+      color: #212121;
+    }
+
+    .action-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: #2874f0;
+    }
+
+    /* EXCHANGE DETAILS CARD */
+    .exchange-card {
+      background: #ffffff;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+      padding: 20px 24px;
+      border-left: 4px solid #2874f0;
+    }
+
+    .exchange-header-badge {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .exchange-badge-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #212121;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .exchange-tag {
+      background-color: #e3edfc;
+      color: #2874f0;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .exchange-content-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .exchange-thumb-container {
+      width: 80px;
+      height: 80px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: #fafafa;
+    }
+
+    .exchange-thumb-container img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .exchange-info-col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .exchange-device-name {
+      font-size: 15px;
+      font-weight: 600;
+      color: #212121;
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+
+    .exchange-sublabel {
+      font-size: 12px;
+      color: #878787;
+      margin-bottom: 6px;
+    }
+
+    .exchange-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #f6fbf5;
+      color: #26a541;
+      border: 1px solid #d4edda;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    .exchange-status-pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #26a541;
+      border-radius: 50%;
+    }
+
+    /* VIVO STORE INSTRUCTION ALERT */
+    .exchange-store-banner {
+      background-color: #fff9e6;
+      border: 1px solid #ffe399;
+      border-radius: 4px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .exchange-store-banner svg {
+      width: 20px;
+      height: 20px;
+      fill: #ff9f00;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .exchange-banner-text {
+      flex: 1;
+    }
+
+    .exchange-banner-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #212121;
+      margin-bottom: 2px;
+    }
+
+    .exchange-banner-desc {
+      font-size: 12.5px;
+      color: #565656;
+      line-height: 1.45;
+    }
+
+    .exchange-highlight {
+      font-weight: 600;
+      color: #b36b00;
+    }
+
+    .exchange-steps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .exchange-step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .exchange-step-num {
+      width: 22px;
+      height: 22px;
+      background: #f0f4ff;
+      color: #2874f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .exchange-step-text-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #212121;
+    }
+
+    .exchange-step-text-desc {
+      font-size: 11.5px;
+      color: #878787;
+    }
+
+    /* DOORSTEP CARD */
+    .doorstep-card {
+      background: #ffffff;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+      padding: 18px 24px;
+    }
+
+    .doorstep-card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #212121;
+      margin-bottom: 14px;
+    }
+
+    .doorstep-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .doorstep-icon-box {
+      width: 40px;
+      height: 40px;
+      background: #f1f3f6;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .doorstep-icon-box svg {
+      width: 22px;
+      height: 22px;
+      fill: #212121;
+    }
+
+    .doorstep-item-title {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #212121;
+    }
+
+    .doorstep-item-desc {
+      font-size: 12px;
+      color: #878787;
+    }
+
+    /* RIGHT COLUMN CARDS */
+    .side-card {
+      background: #ffffff;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+      padding: 20px;
+    }
+
+    .side-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: #212121;
+      cursor: pointer;
+    }
+
+    .side-card-header-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f3f6;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .side-card-header-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: #878787;
+    }
+
+    /* DELIVERY DETAILS */
+    .delivery-detail-list {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .delivery-detail-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 4px 0;
+    }
+
+    .delivery-detail-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .delivery-detail-left svg {
+      width: 18px;
+      height: 18px;
+      fill: #878787;
+      flex-shrink: 0;
+    }
+
+    .delivery-detail-text {
+      font-size: 13px;
+      color: #212121;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .delivery-detail-text strong {
+      font-weight: 500;
+      margin-right: 6px;
+    }
+
+    .delivery-detail-row svg.arrow-right {
+      width: 14px;
+      height: 14px;
+      fill: #878787;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+
+    /* PRICE DETAILS CARD */
+    .price-box-wrapper {
+      margin-top: 16px;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      background: #ffffff;
+    }
+
+    .price-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #212121;
+      margin-bottom: 14px;
+    }
+
+    .price-line .label {
+      color: #212121;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .price-line .label .info-circle {
+      width: 13px;
+      height: 13px;
+      border: 1px solid #878787;
+      color: #878787;
+      border-radius: 50%;
+      font-size: 9px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .price-line .label svg.chevron-small {
+      width: 10px;
+      height: 10px;
+      fill: #878787;
+    }
+
+    .price-line .value {
+      font-weight: 500;
+      color: #212121;
+    }
+
+    .price-line .value.discount {
+      color: #388e3c;
+    }
+
+    .price-divider {
+      border-top: 1px dashed #d1d5db;
+      margin: 14px 0 16px;
+    }
+
+    .total-amount-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 700;
+      color: #212121;
+      margin-bottom: 16px;
+    }
+
+    .total-amount-row .amount {
+      font-size: 16px;
+    }
+
+    /* PAYMENT MODE PILL (EXCHANGE) */
+    .paid-by-pill-box {
+      background-color: #f7f9fa;
+      border: 1px solid #edf0f2;
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .paid-by-label {
+      font-size: 13.5px;
+      color: #212121;
+      font-weight: 500;
+    }
+
+    .payment-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .payment-icon-badge {
+      border: 1.5px solid #2874f0;
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-size: 10px;
+      font-weight: 700;
+      color: #2874f0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: #ffffff;
+      line-height: 12px;
+    }
+
+    .payment-badge-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: #2874f0;
+    }
+
+    .offers-earned-strip {
+      margin-top: 14px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      background: #ffffff;
+    }
+
+    .offers-earned-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #212121;
+    }
+
+    .offers-earned-left svg {
+      width: 18px;
+      height: 18px;
+      fill: #212121;
+    }
+
+    .offers-earned-strip svg.down-arrow {
+      width: 14px;
+      height: 14px;
+      fill: #878787;
+    }
+
+    /* ========================================================
+       RESPONSIVE DESIGN (TABLETS & MOBILE SMARTPHONES)
+       ======================================================== */
+    @media (max-width: 992px) {
+      .main-layout {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .col-right {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Flip header to mobile app top-bar */
+      .header-top {
+        height: 52px;
+      }
+
+      .header-inner {
+        display: none;
+      }
+
+      .mobile-header-inner {
+        display: flex;
+      }
+
+      .header-subnav {
+        display: none;
+      }
+
+      .breadcrumb-bar {
+        display: none;
+      }
+
+      .main-layout {
+        padding: 8px 10px 24px;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+
+      .card,
+      .exchange-card,
+      .doorstep-card,
+      .side-card {
+        padding: 16px 14px;
+        border-radius: 4px;
+      }
+
+      .product-title {
+        font-size: 14.5px;
+        line-height: 1.35;
+      }
+
+      .product-thumb-container {
+        width: 64px;
+        height: 64px;
+      }
+
+      .timeline-container {
+        padding-left: 16px;
+      }
+
+      .timeline-dot {
+        left: -17px;
+      }
+
+      .timeline-line {
+        left: -11px;
+      }
+
+      .timeline-desc-box {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .exchange-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .exchange-thumb-container {
+        width: 68px;
+        height: 68px;
+      }
+
+      .exchange-device-name {
+        font-size: 14px;
+      }
+
+      .exchange-store-banner {
+        padding: 12px;
+        gap: 10px;
+      }
+
+      .exchange-banner-title {
+        font-size: 12.5px;
+      }
+
+      .exchange-banner-desc {
+        font-size: 12px;
+      }
+
+      .card-actions-bar {
+        padding-top: 14px;
+      }
+
+      .action-btn {
+        padding: 6px 8px;
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-layout {
+        padding: 6px 6px 20px;
+        gap: 8px;
+      }
+
+      .card,
+      .exchange-card,
+      .doorstep-card,
+      .side-card {
+        padding: 14px 12px;
+      }
+
+      .price-row-left {
+        gap: 6px;
+      }
+
+      .price-amount {
+        font-size: 15px;
+      }
+
+      .offers-count {
+        font-size: 12px;
+      }
+
+      .exchange-content-row {
+        gap: 12px;
+      }
+
+      .exchange-thumb-container {
+        width: 60px;
+        height: 60px;
+      }
+
+      .exchange-status-pill {
+        font-size: 11px;
+        padding: 2px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="header-top">
+    <!-- Desktop Header -->
+    <div class="header-inner">
+      <div class="logo-container">
+        <span class="logo-title">Flipkart</span>
+        <div class="logo-sub">
+          <span class="explore">Explore</span>
+          <span class="plus">Plus</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="#ffe500" style="margin-left: 2px;">
+            <path d="M12 1.5l3.09 6.26L22 8.77l-5 4.87 1.18 6.88L12 17.27l-6.18 3.25L7 13.64 2 8.77l6.91-1.01L12 1.5z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="search-box-wrapper">
+        <input type="text" class="search-input" placeholder="Search for products, brands and more" value="">
+        <button class="search-icon-btn" aria-label="Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#2874f0">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="header-links">
+        <div class="header-link-item">
+          <span>Rishav</span>
+          <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M7 10l5 5 5-5z"/>
+          </svg>
+        </div>
+
+        <div class="header-link-item">
+          <span>Become a Seller</span>
+        </div>
+
+        <div class="header-link-item">
+          <span>More</span>
+          <svg class="chevron" width="10" height="10" viewBox="0 0 24 24" fill="#ffffff">
+            <path d="M7 10l5 5 5-5z"/>
+          </svg>
+        </div>
+
+        <div class="cart-link">
+          <div class="cart-icon-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+            <span class="cart-badge">12</span>
+          </div>
+          <span>Cart</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Header (Visible on Mobile & Tablets) -->
+    <div class="mobile-header-inner">
+      <div class="mobile-header-left">
+        <button class="mobile-back-btn" aria-label="Back">
+          <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        </button>
+        <span class="mobile-header-title">Order Details</span>
+      </div>
+      <div class="mobile-header-right">
+        <button class="mobile-header-icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+        <button class="mobile-header-icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          <span class="cart-badge" style="top: -6px; right: -6px;">12</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SUB CATEGORIES NAV (Desktop Only) -->
+  <div class="header-subnav">
+    <div class="subnav-inner">
+      <div class="subnav-item">Electronics <svg width="8" height="8" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></div>
+      <div class="subnav-item">TVs & Appliances <svg width="8" height="8" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></div>
+      <div class="subnav-item">Men <svg width="8" height="8" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></div>
+      <div class="subnav-item">Women <svg width="8" height="8" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></div>
+      <div class="subnav-item">Baby & Kids <svg width="8" height="8" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></div>
+      <div class="subnav-item">Home & Furniture <svg width="8" height="8" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></div>
+      <div class="subnav-item">Sports, Books & More <svg width="8" height="8" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></div>
+      <div class="subnav-item">Flights</div>
+      <div class="subnav-item">Offer Zone</div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMBS (Desktop Only) -->
+  <div class="breadcrumb-bar">
+    <a href="#">Home</a>
+    <span>&gt;</span>
+    <a href="#">My Account</a>
+    <span>&gt;</span>
+    <a href="#">My Orders</a>
+    <span>&gt;</span>
+    <span class="active">OD438851752103565100</span>
+  </div>
+
+  <!-- MAIN SECTION -->
+  <main class="main-layout">
+
+    <!-- LEFT COLUMN -->
+    <div class="col-left">
+
+      <!-- MAIN ORDER ITEM CARD -->
+      <div class="card">
+        <div class="product-row">
+          <div class="product-info">
+            <h1 class="product-title">POCO X8 Pro (White, 256 GB)</h1>
+            <div class="product-subtitle">White</div>
+            <div class="seller-info">Seller: Flashstar Commerce</div>
+            <div class="price-row-left">
+              <span class="price-amount">&#8377;699</span>
+              <span class="price-strikethrough">&#8377;33,499</span>
+              <span class="offers-count">20 offers</span>
+            </div>
+          </div>
+          <div class="product-thumb-container">
+            <img src="./Poco.jpeg" alt="POCO X8 Pro">
+          </div>
+        </div>
+
+        <!-- TRACKER TIMELINE -->
+        <div class="timeline-container">
+          <!-- Step 1: Confirmed -->
+          <div class="timeline-item">
+            <div class="timeline-dot completed">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l11-11a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/></svg>
+            </div>
+            <div class="timeline-line dashed"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Order Confirmed, Today</div>
+              <div class="timeline-desc-box">Your Order has been placed., Sun 11th Oct</div>
+            </div>
+          </div>
+
+          <!-- Step 2: Shipped -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line dashed"></div>
+            <div class="timeline-content">
+              <div class="timeline-title" style="color: #565656;">Shipped, Expected By Oct 11</div>
+            </div>
+          </div>
+
+          <!-- Step 3: Out For Delivery -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line dashed"></div>
+            <div class="timeline-content">
+              <div class="timeline-title" style="color: #565656;">Out For Delivery</div>
+            </div>
+          </div>
+
+          <!-- Step 4: Delivery -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title" style="color: #565656;">Delivering by tomorrow, Mon Oct 12 By 11 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="see-all-updates">See All Updates &gt;</a>
+        <div class="delivery-exec-note">Delivery Executive details will be available once the order is out for delivery</div>
+
+        <div class="card-actions-bar">
+          <button class="action-btn">Cancel</button>
+          <button class="action-btn chat-btn">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+            Chat with us
+          </button>
+        </div>
+      </div>
+
+      <!-- DEVICE FOR EXCHANGE CARD -->
+      <div class="exchange-card">
+        <div class="exchange-header-badge">
+          <div class="exchange-badge-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#2874f0">
+              <path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/>
+            </svg>
+            <span>Exchange Order Details</span>
+          </div>
+          <span class="exchange-tag">Exchange Applied</span>
+        </div>
+
+        <div class="exchange-content-row">
+          <div class="exchange-thumb-container">
+            <img src="./IQOO.png" alt="iQOO Z10 5G">
+          </div>
+          <div class="exchange-info-col">
+            <div class="exchange-device-name">Device for Exchange: iQOO Z10 5G</div>
+            <div class="exchange-sublabel">Old Phone Exchange &bull; Working Condition &bull; IMEI Verified</div>
+            <div class="exchange-status-pill">Exchange Confirmed &bull; Pickup Scheduled</div>
+          </div>
+        </div>
+
+        <!-- VIVO STORE SUBMISSION NOTICE -->
+        <div class="exchange-store-banner">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+          </svg>
+          <div class="exchange-banner-text">
+            <div class="exchange-banner-title">Doorstep Exchange &amp; Store Handover Guidelines</div>
+            <div class="exchange-banner-desc">
+              Your new device is <strong>delivering by tomorrow</strong>. After delivering, within <strong>3 days</strong>, submit the exchange phone in the <span class="exchange-highlight">nearby Vivo store</span> for final verification and trade-in clearance.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-STEP QUICK TIMELINE -->
+        <div class="exchange-steps-grid">
+          <div class="exchange-step-item">
+            <div class="exchange-step-num">1</div>
+            <div>
+              <div class="exchange-step-text-title">Receive POCO X8 Pro</div>
+              <div class="exchange-step-text-desc">Delivering by tomorrow with open-box verification</div>
+            </div>
+          </div>
+          <div class="exchange-step-item">
+            <div class="exchange-step-num">2</div>
+            <div>
+              <div class="exchange-step-text-title">Submit iQOO Z10 5G</div>
+              <div class="exchange-step-text-desc">Submit at nearby Vivo store within 3 days of delivery</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEEP IN MIND AT DOORSTEP -->
+      <div class="doorstep-card">
+        <div class="doorstep-card-title">Keep in mind at doorstep</div>
+        <div class="doorstep-item">
+          <div class="doorstep-icon-box">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9zM12 4.15L6.04 7.5 12 10.85l5.96-3.35L12 4.15zM5 8.9v6.52l6 3.38v-6.52L5 8.9zm14 6.52V8.9l-6 3.38v6.52l6-3.38z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="doorstep-item-title">Open box delivery</div>
+            <div class="doorstep-item-desc">Delivery partner will open the package in front of you to verify the phone condition.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-right">
+
+      <!-- DELIVERY DETAILS CARD -->
+      <div class="side-card">
+        <div class="side-card-header">
+          <span>Delivery details</span>
+          <div class="side-card-header-icon">
+            <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <div class="delivery-detail-list">
+          <div class="delivery-detail-row">
+            <div class="delivery-detail-left">
+              <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              <div class="delivery-detail-text">
+                <strong>Home</strong> Near AICC COMPUTER Centre Ganga Roa...
+              </div>
+            </div>
+            <svg class="arrow-right" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+
+          <div class="delivery-detail-row">
+            <div class="delivery-detail-left">
+              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <div class="delivery-detail-text">
+                <strong>Rishav Biswas</strong> 9734687196, 9563812404
+              </div>
+            </div>
+            <svg class="arrow-right" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICE DETAILS CARD -->
+      <div class="side-card">
+        <div class="side-card-header">
+          <span>Price details</span>
+          <div class="side-card-header-icon">
+            <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+          </div>
+        </div>
+
+        <div class="price-box-wrapper">
+          <div class="price-line">
+            <span class="label">Listing price</span>
+            <span class="value">&#8377;33,499</span>
+          </div>
+
+          <div class="price-line">
+            <span class="label">
+              Selling price
+              <span class="info-circle">i</span>
+            </span>
+            <span class="value" style="color: #878787; text-decoration: line-through;">&#8377;33,499</span>
+          </div>
+
+          <div class="price-line">
+            <span class="label">
+              Exchange discount
+              <span class="info-circle">i</span>
+            </span>
+            <span class="value discount">&minus;&#8377;32,800</span>
+          </div>
+
+          <div class="price-divider"></div>
+
+          <div class="total-amount-row">
+            <span>Total amount</span>
+            <span class="amount">&#8377;699</span>
+          </div>
+
+          <!-- MODE OF PAYMENT: EXCHANGE -->
+          <div class="paid-by-pill-box">
+            <span class="paid-by-label">Paid By</span>
+            <div class="payment-badge-wrap">
+              <span class="payment-icon-badge">EXCHANGE</span>
+              <span class="payment-badge-text">Exchange</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="offers-earned-strip">
+          <div class="offers-earned-left">
+            <svg viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 0 0 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+            <span>Offers earned</span>
+          </div>
+          <svg class="down-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
